@@ -2,7 +2,6 @@ name: 🐛 Bug Report
 description: Report a bug or unexpected behavior
 title: "[BUG] "
 labels: ["bug", "needs-triage"]
-projects: ["org/1"]  # Auto-add to project
 assignees: []
 body:
   - type: markdown

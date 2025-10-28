@@ -2,7 +2,6 @@ name: ✅ Task
 description: Create a development task or work item
 title: "[TASK] "
 labels: ["task"]
-projects: ["org/1"]
 body:
   - type: markdown
     attributes:

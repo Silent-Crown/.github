@@ -2,7 +2,6 @@ name: 🛠️ Technical Debt
 description: Track technical debt that needs addressing
 title: "[TECH DEBT] "
 labels: ["tech-debt", "maintenance"]
-projects: ["org/1"]
 body:
   - type: textarea
     id: description

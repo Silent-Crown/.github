@@ -2,7 +2,6 @@ name: 📖 User Story
 description: Describe a feature from the user's perspective
 title: "[STORY] As a [user], I want [feature] so that [benefit]"
 labels: ["user-story", "needs-grooming"]
-projects: ["org/1"]
 body:
   - type: markdown
     attributes:
