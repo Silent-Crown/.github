@@ -1,0 +1,73 @@
+name: 📖 User Story
+description: Describe a feature from the user's perspective
+title: "[STORY] As a [user], I want [feature] so that [benefit]"
+labels: ["user-story", "needs-grooming"]
+projects: ["org/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story Format
+        Please follow the standard user story format
+        
+  - type: input
+    id: user-type
+    attributes:
+      label: As a...
+      description: Type of user
+      placeholder: "developer, customer, admin, etc."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: want
+    attributes:
+      label: I want to...
+      description: What the user wants to accomplish
+    validations:
+      required: true
+      
+  - type: textarea
+    id: benefit
+    attributes:
+      label: So that...
+      description: The benefit or value provided
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Conditions for story completion
+      value: |
+        **Given** [context]
+        **When** [action]
+        **Then** [outcome]
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+        - "13"
+        - "21"
+        
+  - type: checkboxes
+    id: definition-of-ready
+    attributes:
+      label: Definition of Ready
+      options:
+        - label: User story is clear
+        - label: Acceptance criteria defined
+        - label: Dependencies identified
+        - label: Estimated by team
+        - label: UX/UI designs ready (if applicable)
+        - label: Technical approach discussed
