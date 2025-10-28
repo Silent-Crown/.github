@@ -1,0 +1,56 @@
+name: 🛠️ Technical Debt
+description: Track technical debt that needs addressing
+title: "[TECH DEBT] "
+labels: ["tech-debt", "maintenance"]
+projects: ["org/1"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Debt Description
+      description: What technical debt exists?
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: debt-type
+    attributes:
+      label: Type of Debt
+      options:
+        - Code Quality (refactoring needed)
+        - Missing Tests
+        - Performance Optimization
+        - Security Vulnerability
+        - Outdated Dependencies
+        - Missing Documentation
+        - Architectural Issues
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: Current Impact
+      description: How is this affecting the project?
+      
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk if Not Addressed
+      description: What happens if we don't fix this?
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Critical (Do immediately)
+        - P1 - High (Do this sprint)
+        - P2 - Medium (Do this quarter)
+        - P3 - Low (Do eventually)
+        
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should we address this debt?
