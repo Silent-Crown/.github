@@ -1,0 +1,59 @@
+name: 🏔️ Epic
+description: Large feature or initiative spanning multiple stories
+title: "[EPIC] "
+labels: ["epic", "needs-breakdown"]
+projects: ["org/1"]
+body:
+  - type: textarea
+    id: vision
+    attributes:
+      label: Epic Vision
+      description: High-level description of what we're building and why
+    validations:
+      required: true
+      
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Business Value
+      description: What value does this deliver?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: Success Metrics
+      description: How will we measure success?
+      placeholder: |
+        - KPI 1:
+        - KPI 2:
+        - KPI 3:
+        
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: List of stories that make up this epic
+      value: |
+        - [ ] #issue_number - Story title
+        - [ ] #issue_number - Story title
+        - [ ] TBD - Story to be created
+        
+  - type: input
+    id: target-release
+    attributes:
+      label: Target Release
+      placeholder: "Q2 2025, v3.0, Sprint 24"
+      
+  - type: dropdown
+    id: epic-state
+    attributes:
+      label: Epic State
+      options:
+        - Discovery
+        - Planning
+        - In Progress
+        - Testing
+        - Ready for Release
+        - Released
