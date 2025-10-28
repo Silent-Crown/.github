@@ -1,0 +1,68 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+projects: ["org/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for suggesting a new feature!
+        Please provide as much detail as possible to help us understand your request.
+        
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your ideal solution
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other solutions have you considered?
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      options:
+        - Must Have - Critical for launch
+        - Should Have - Important but not critical
+        - Nice to Have - Would improve experience
+        - Future Consideration
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: user-impact
+    attributes:
+      label: User Impact
+      options:
+        - label: Impacts all users
+        - label: Impacts paying customers
+        - label: Impacts free users
+        - label: Impacts internal team
+        - label: Improves performance
+        - label: Improves accessibility
+        
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How will we measure success?
+      placeholder: |
+        - Users can...
+        - System should...
+        - Performance improves by...
