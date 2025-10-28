@@ -1,0 +1,69 @@
+name: ✅ Task
+description: Create a development task or work item
+title: "[TASK] "
+labels: ["task"]
+projects: ["org/1"]
+body:
+  - type: markdown
+    attributes:
+      value: "## Development Task"
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What needs to be done?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Definition of done for this task
+      value: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      options:
+        - XS (< 2 hours)
+        - S (2-4 hours)
+        - M (1-2 days)
+        - L (3-5 days)
+        - XL (1-2 weeks)
+        - XXL (> 2 weeks - consider breaking down)
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: type
+    attributes:
+      label: Task Type
+      options:
+        - Feature Development
+        - Bug Fix
+        - Refactoring
+        - Documentation
+        - Testing
+        - DevOps/Infrastructure
+        - Research/Spike
+        
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List any blocking dependencies or related issues
+      placeholder: "Blocked by #123, Related to #456"
+      
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Any technical details or implementation notes
